@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Settings – NoteNest</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="layout"><div id="sidebarMount"></div><main class="main"><div id="topbarMount"></div>
+<div class="page-head"><div><h1>⚙️ Settings</h1><p class="muted">Manage your profile and account security.</p></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start" class="settings-grid">
+<div class="panel"><h3>👤 Profile Details</h3><div class="alert" id="profileAlert"></div>
+<div class="form-group"><label>Full Name</label><input id="setName"></div>
+<div class="form-group"><label>Email (cannot be changed)</label><input id="setEmail" disabled></div>
+<div class="form-group"><label>College</label><input id="setCollege"></div>
+<div class="form-group"><label>Branch</label><select id="setBranch"><option value="">Select branch</option><option>CSE</option><option>ECE</option><option>EEE</option><option>MECH</option><option>CIVIL</option><option>IT</option><option>AI &amp; DS</option><option>Other</option></select></div>
+<div class="form-group"><label>Semester</label><select id="setSemester"></select></div>
+<button class="btn" style="width:100%;justify-content:center" onclick="saveProfile()">Save Changes</button></div>
+<div class="panel"><h3>🔒 Change Password</h3><div class="alert" id="pwAlert"></div>
+<div class="form-group"><label>Current Password</label><input id="pwCurrent" type="password" placeholder="Your current password"></div>
+<div class="form-group"><label>New Password</label><input id="pwNew" type="password" placeholder="At least 6 characters"></div>
+<div class="form-group"><label>Confirm New Password</label><input id="pwConfirm" type="password" placeholder="Repeat new password"></div>
+<button class="btn" style="width:100%;justify-content:center" onclick="changePw()">Update Password</button>
+<h3 style="margin-top:26px">🚪 Session</h3>
+<p class="muted small" style="margin-bottom:10px">Sign out of NoteNest on this device.</p>
+<button class="btn btn-danger" style="width:100%;justify-content:center" onclick="logout()">Logout</button></div></div></main></div><div id="modalMount"></div><script src="js/api.js"></script><script src="js/settings.js"></script></body></html>

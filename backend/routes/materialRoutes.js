@@ -1,0 +1,14 @@
+const express = require('express');
+const router = express.Router();
+const ctrl = require('../controllers/materialController');
+const { protect, optionalAuth } = require('../middleware/auth');
+const upload = require('../middleware/upload');
+router.get('/', ctrl.getMaterials);
+router.get('/subjects', ctrl.getSubjects);
+router.get('/stats', protect, ctrl.getStats);
+router.get('/my', protect, ctrl.getMyMaterials);
+router.get('/:id', ctrl.getMaterial);
+router.get('/:id/download', optionalAuth, ctrl.downloadMaterial);
+router.post('/', protect, upload.single('file'), ctrl.createMaterial);
+router.delete('/:id', protect, ctrl.deleteMaterial);
+module.exports = router;

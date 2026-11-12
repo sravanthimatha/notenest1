@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Study Planner – NoteNest</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="layout"><div id="sidebarMount"></div><main class="main"><div id="topbarMount"></div>
+<div class="page-head"><div><h1>🗓️ Study Planner</h1><p class="muted">Plan study tasks and track your progress.</p></div></div>
+<div class="panel" style="margin-bottom:18px"><h3>➕ Add a study task</h3>
+<div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr auto;gap:10px" class="planner-form">
+<input id="taskTitle" placeholder="e.g. Revise OS unit 3">
+<input id="taskSubject" placeholder="Subject (optional)">
+<input id="taskDate" type="date">
+<input id="taskTime" type="time">
+<button class="btn" onclick="addTask()">Add Task</button></div>
+<div style="margin-top:16px"><div style="display:flex;justify-content:space-between;font-size:13px;font-weight:600"><span id="progressLabel">0 of 0 done</span><span id="progressPct">0%</span></div>
+<div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div></div></div>
+<div id="taskGroups"></div><div id="plannerEmpty"></div></main></div><div id="modalMount"></div><script src="js/api.js"></script><script src="js/planner.js"></script></body></html>

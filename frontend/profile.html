@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>My Profile – NoteNest</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="layout"><div id="sidebarMount"></div><main class="main"><div id="topbarMount"></div>
+<div class="page-head"><div><h1>👤 My Profile</h1><p class="muted">Your NoteNest account at a glance.</p></div><a class="btn" href="settings.html">⚙️ Edit in Settings</a></div>
+<div class="panel" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><span class="avatar" id="profAvatar" style="width:74px;height:74px;font-size:30px">S</span>
+<div style="flex:1;min-width:220px"><h2 id="profName" style="font-size:24px">Student</h2><p class="muted" id="profEmail">—</p>
+<div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:9px"><span class="badge" id="profCollege">—</span><span class="badge" style="background:#f7ecd2;color:#8a6d1f" id="profBranch">—</span><span class="badge" style="background:#e2f6ec;color:#146c43" id="profSem">—</span></div></div>
+<a class="btn btn-outline" href="mynotes.html">📄 My Notes</a></div>
+<div class="stats" style="margin-top:18px">
+<div class="stat"><span class="ic purple">📄</span><div><span>Available Materials</span><b id="pStatAvailable">0</b></div></div>
+<div class="stat"><span class="ic green">⬆️</span><div><span>My Uploads</span><b id="pStatUploaded">0</b></div></div>
+<div class="stat"><span class="ic red">⬇️</span><div><span>Downloads on My Notes</span><b id="pStatDownloads">0</b></div></div>
+<div class="stat"><span class="ic gold">🔖</span><div><span>Bookmarked</span><b id="pStatBookmarked">0</b></div></div></div>
+<div class="panel"><h3>⚡ Quick Access</h3><div class="quick" style="grid-template-columns:repeat(4,1fr)">
+<a class="q1" href="upload.html"><span class="qi">☁️</span>Upload Notes</a>
+<a class="q2" href="downloads.html"><span class="qi">⬇️</span>My Downloads</a>
+<a class="q3" href="forum.html"><span class="qi">💬</span>Forum</a>
+<a class="q4" href="bookmarks.html"><span class="qi">🔖</span>Bookmarks</a></div></div>
+</main></div><div id="modalMount"></div><script src="js/api.js"></script><script src="js/profile.js"></script></body></html>

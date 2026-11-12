@@ -1,0 +1,11 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Discussion Forum – NoteNest</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="layout"><div id="sidebarMount"></div><main class="main"><div id="topbarMount"></div>
+<div class="page-head"><div><h1>💬 Discussion Forum</h1><p class="muted">Ask doubts, share resources and help your classmates.</p></div><button class="btn" onclick="togglePostForm()">✏️ New Discussion</button></div>
+<div class="panel" id="postFormPanel" style="display:none;margin-bottom:18px"><h3>Start a discussion</h3>
+<div class="form-group"><label>Title</label><input id="postTitle" maxlength="140" placeholder="e.g. Best resources for DSA?"></div>
+<div class="form-group"><label>Tag</label><select id="postTag"><option>General</option><option>Doubt</option><option>Resources</option><option>Exams</option><option>Placements</option><option>Events</option></select></div>
+<div class="form-group"><label>Details</label><textarea id="postBody" rows="4" placeholder="Explain your question or share the details..."></textarea></div>
+<div style="display:flex;gap:8px"><button class="btn" onclick="createPost()">Post Discussion</button><button class="btn btn-light" onclick="togglePostForm()">Cancel</button></div></div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px" id="tagChips">
+<button class="chip on" data-tag="">All</button><button class="chip" data-tag="General">General</button><button class="chip" data-tag="Doubt">Doubts</button><button class="chip" data-tag="Resources">Resources</button><button class="chip" data-tag="Exams">Exams</button><button class="chip" data-tag="Placements">Placements</button><button class="chip" data-tag="Events">Events</button></div>
+<div id="postList" style="display:flex;flex-direction:column;gap:12px"></div><div id="forumEmpty"></div></main></div><div id="modalMount"></div><script src="js/api.js"></script><script src="js/forum.js"></script></body></html>

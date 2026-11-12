@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const ctrl = require('../controllers/plannerController');
+const { protect } = require('../middleware/auth');
+router.use(protect);
+router.get('/', ctrl.listTasks);
+router.post('/', ctrl.createTask);
+router.put('/:id', ctrl.updateTask);
+router.delete('/:id', ctrl.deleteTask);
+module.exports = router;

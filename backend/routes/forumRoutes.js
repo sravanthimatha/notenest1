@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const ctrl = require('../controllers/forumController');
+const { protect } = require('../middleware/auth');
+router.use(protect);
+router.get('/', ctrl.listPosts);
+router.post('/', ctrl.createPost);
+router.get('/:id', ctrl.getPost);
+router.post('/:id/replies', ctrl.addReply);
+router.delete('/:id', ctrl.deletePost);
+router.delete('/:id/replies/:replyId', ctrl.deleteReply);
+module.exports = router;

@@ -1,0 +1,30 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Dashboard – NoteNest</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="layout"><div id="sidebarMount"></div><main class="main">
+<div id="topbarMount"></div>
+<section class="banner"><div><h2>Welcome to <em>NoteNest!</em></h2><p>Your ultimate platform to find and share study materials.</p><a class="btn" href="index.html#materials">Explore Now →</a></div><div class="banner-art"><img src="images/banner-student.png" alt="Student studying with a laptop"></div></section>
+<div class="stats">
+<div class="stat"><span class="ic purple">📄</span><div><span>Available Materials</span><b id="statAvailable">0</b></div></div>
+<div class="stat"><span class="ic green">⬆️</span><div><span>My Uploads</span><b id="statUploaded">0</b></div></div>
+<div class="stat"><span class="ic red">⬇️</span><div><span>Downloads on My Notes</span><b id="statDownloads">0</b></div></div>
+<div class="stat"><span class="ic gold">🔖</span><div><span>Bookmarked</span><b id="statBookmarked">0</b></div></div></div>
+<div class="dash-grid"><div>
+<div class="panel"><h3>🔥 Trending Materials <a class="seeall" href="index.html#materials">See All →</a></h3><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:4px" id="recentGrid"></div><div id="recentEmpty"></div></div>
+<div class="panel" style="margin-top:18px"><h3 id="pickedTitle">🎯 Picked for Your Semester <a class="seeall" href="index.html#materials">See All →</a></h3><div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin-top:4px" id="pickedGrid"></div><div id="pickedEmpty"></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px" class="dash-bottom">
+<div class="panel"><h3>📄 My Notes <a class="seeall" href="mynotes.html">See All →</a></h3><div class="mini-list" id="myNotesList"></div><div id="myNotesEmpty"></div></div>
+<div class="panel"><h3>⚡ Quick Access</h3><div class="quick">
+<a class="q1" href="upload.html"><span class="qi">☁️</span>Upload Notes</a>
+<a class="q2" href="downloads.html"><span class="qi">⬇️</span>My Downloads</a>
+<a class="q3" href="index.html#materials"><span class="qi">🔍</span>Browse Notes</a>
+<a class="q4" href="bookmarks.html"><span class="qi">🔖</span>My Bookmarks</a></div></div>
+</div></div>
+<aside>
+<div class="panel"><h3>🎯 Filter Materials</h3>
+<div class="form-group"><label>Subject</label><select id="fSubject"><option value="">All Subjects</option></select></div>
+<div class="form-group"><label>Semester</label><select id="fSemester"><option value="">All Semesters</option></select></div>
+<div class="form-group"><label>Type</label><div class="type-chips" id="fTypes">
+<button class="chip on" data-type="">All</button><button class="chip" data-type="Notes">Notes</button><button class="chip" data-type="Question Paper">Question Papers</button><button class="chip" data-type="Assignment">Assignments</button><button class="chip" data-type="Lab Record">Lab Records</button></div></div>
+<button class="btn" style="width:100%;justify-content:center" onclick="applyFilters()">🔍 Search</button></div>
+<div class="panel" style="margin-top:18px"><h3>🔖 My Bookmarks <a class="seeall" href="bookmarks.html">See All →</a></h3><div class="mini-list" id="bmList"></div><div id="bmEmpty"></div></div>
+</aside></div>
+</main></div><div id="modalMount"></div><script src="js/api.js"></script><script src="js/dashboard.js"></script></body></html>
